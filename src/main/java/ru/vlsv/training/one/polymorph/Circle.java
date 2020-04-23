@@ -8,5 +8,15 @@ package ru.vlsv.training.one.polymorph;
  * @link https://github.com/Centnerman
  */
 
-public class Circle {
+public class Circle implements Figure{
+    @Override
+    public void Draw() {
+        System.out.println("Draw circle");
+    }
+
+    @Override
+    public void Move() {
+        System.out.println("Move circle");
+    }
+
 }

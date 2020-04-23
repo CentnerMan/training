@@ -8,5 +8,15 @@ package ru.vlsv.training.one.polymorph;
  * @link https://github.com/Centnerman
  */
 
-public class Square {
+public class Square implements Figure{
+    @Override
+    public void Draw() {
+        System.out.println("Draw square");
+    }
+
+    @Override
+    public void Move() {
+        System.out.println("Move square");
+    }
+
 }

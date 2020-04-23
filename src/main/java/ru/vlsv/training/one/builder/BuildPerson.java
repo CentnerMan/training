@@ -9,4 +9,9 @@ package ru.vlsv.training.one.builder;
  */
 
 public class BuildPerson {
+    public static void main(String[] args) {
+        Person personBob = new Person.Builder().addFirstName("Bob").addLastName("Marley")
+                .addAddress("USA").addGender("male").build();
+        System.out.println(personBob.toString());
+    }
 }

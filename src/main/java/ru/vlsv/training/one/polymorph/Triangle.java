@@ -8,5 +8,14 @@ package ru.vlsv.training.one.polymorph;
  * @link https://github.com/Centnerman
  */
 
-public class Triangle {
+public class Triangle implements Figure{
+    @Override
+    public void Draw() {
+        System.out.println("Draw triangle");
+    }
+
+    @Override
+    public void Move() {
+        System.out.println("Move triangle");
+    }
 }

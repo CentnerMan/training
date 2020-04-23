@@ -8,5 +8,8 @@ package ru.vlsv.training.one.polymorph;
  * @link https://github.com/Centnerman
  */
 
-public class Figure {
+public interface Figure {
+
+    public void Draw();
+    public void Move();
 }
