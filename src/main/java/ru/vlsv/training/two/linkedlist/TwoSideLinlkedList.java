@@ -1,6 +1,4 @@
-package ru.geekbrains.datastructures.linkedlist.twoside;
-
-import ru.geekbrains.datastructures.linkedlist.LinkedList;
+package ru.vlsv.training.two.linkedlist;
 
 public interface TwoSideLinlkedList<E> extends LinkedList<E> {
 
