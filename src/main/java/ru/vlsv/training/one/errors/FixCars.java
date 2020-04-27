@@ -9,13 +9,11 @@ package ru.vlsv.training.one.errors;
  */
 
 
-interface Moveable {
+interface Driving {
     default void move() {
         System.out.println("Car is moving");
     }
-}
 
-interface Stopable {
     default void stop() {
         System.out.println("Car is stop");
     }
@@ -26,8 +24,8 @@ class Engine {
     }
 }
 
-abstract class Car implements Moveable, Stopable{
-    public Engine engine;
+abstract class Car implements Driving {
+    protected Engine engine;
     private String color;
     private String name;
 
