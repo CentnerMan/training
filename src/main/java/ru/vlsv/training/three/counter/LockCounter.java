@@ -11,29 +11,29 @@ import java.util.concurrent.locks.ReentrantLock;
  * @link https://github.com/Centnerman
  */
 
-public class SynchronizedCounter {
+public class LockCounter {
 
     Lock lock = new ReentrantLock();
 
-    private int c;
+    private int counter;
 
-    public SynchronizedCounter() {
-        c = 0;
+    public LockCounter() {
+        counter = 0;
     }
 
     public int value() {
-        return c;
+        return counter;
     }
 
     public void inc() {
         lock.lock();
-        c++;
+        counter++;
         lock.unlock();
     }
 
     public void dec() {
         lock.lock();
-        c--;
+        counter--;
         lock.unlock();
     }
 }
