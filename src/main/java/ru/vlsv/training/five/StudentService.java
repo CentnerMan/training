@@ -1,5 +1,9 @@
 package ru.vlsv.training.five;
 
+import lombok.NoArgsConstructor;
+
+import java.util.List;
+
 /**
  * GeekBrains Java, training.
  *
@@ -8,5 +12,29 @@ package ru.vlsv.training.five;
  * @link https://github.com/Centnerman
  */
 
+@NoArgsConstructor
 public class StudentService {
+
+    private final StudentDao studentDao = new StudentDao();
+
+    public Student findStudent(Integer id) {
+        return studentDao.findById(id);
+    }
+
+    public void saveStudent(Student student) {
+        studentDao.save(student);
+    }
+
+    public void deleteStudent(Student student) {
+        studentDao.delete(student);
+    }
+
+    public void updateStudent(Student student) {
+        studentDao.update(student);
+    }
+
+    public List<Student> findAllStudents() {
+        return studentDao.findAll();
+    }
+
 }
