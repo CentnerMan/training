@@ -1,5 +1,9 @@
 package ru.vlsv.training.seven.repositories;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import ru.vlsv.training.seven.entities.Student;
+
 /**
  * GeekBrains Java, training.
  *
@@ -8,5 +12,10 @@ package ru.vlsv.training.seven.repositories;
  * @link https://github.com/Centnerman
  */
 
-public class StudentRepository {
+@Repository
+public interface StudentRepository extends JpaRepository<Student, Integer> {
+
+    Student findOneByName(String name);
+    Student findOneById(Integer id);
+    boolean existsByName(String name);
 }

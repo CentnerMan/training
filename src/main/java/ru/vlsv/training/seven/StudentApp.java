@@ -1,5 +1,9 @@
 package ru.vlsv.training.seven;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
 /**
  * GeekBrains Java, training.
  *
@@ -8,5 +12,11 @@ package ru.vlsv.training.seven;
  * @link https://github.com/Centnerman
  */
 
+@SpringBootApplication
 public class StudentApp {
+
+    public static void main(String[] args) {
+        SpringApplication.run(StudentApp.class, args);
+    }
+
 }
